@@ -10,8 +10,13 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+      <header className={styles.header}>
+        <img src="/Group 5.svg" alt="Coucou Logo" className={styles.logo} />
+      </header>
+
+
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          COUCOU <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
