@@ -1,5 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import dynamic from 'next/dynamic'
+const TypeWriterEffect = dynamic(
+  () => import('../utils/typeeffect.js'),
+  { ssr: false }
+)
 
 export default function Home() {
   return (
@@ -13,12 +18,32 @@ export default function Home() {
 
       <main className={styles.main}>
         <header className={styles.header}>
-          <h1 className={styles.title}>
-            MAXIME LAPRAYE
-          </h1>
-          <h2 className={styles.title}>
+          <div>
+            <h1 className={styles.title}>
+              MAXIME LAPRAYE
+            </h1>
+            <TypeWriterEffect 
+              textStyle={{
+                fontFamily: 'Montserrat',
+                color: 'rgb(0,0,0)',
+                fontWeight: 400,
+                fontSize: '0.7em',
+                position: "relative",
+              }}
+              startDelay={2000}
+              cursorColor="#3F3D56"
+              loop={true}
+              nextTextDelay={1000}
+              typeSpeed={30}
+              multiText={[
+                'DIGITAL MARKETING CONSULTANT',
+                'FRONT END DEVELOPER',
+              ]}
+            />
+          </div>
+          {/* <h2 className={styles.title}>
             DIGITAL MARKETING CONSULTANT
-          </h2>
+          </h2> */}
         </header>
 
         <div className={styles.menu}>
@@ -38,7 +63,7 @@ export default function Home() {
             OPERATIONS
           </h1>
         </div>
-
+{/* 
         <h1 className={styles.title}>
           COUCOU <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -46,9 +71,9 @@ export default function Home() {
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
-        </p>
+        </p> */}
 
-        <div className={styles.grid}>
+        {/* <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -76,19 +101,14 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      {/* <footer className={styles.footer}>
+        <h1 className={styles.title}>
+          LET'S CONNECT
+        </h1>
+      </footer> */}
     </div>
   )
 }
