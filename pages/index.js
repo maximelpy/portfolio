@@ -12,10 +12,32 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      <header className={styles.header}>
-        <img src="/Group 5.svg" alt="Coucou Logo" className={styles.logo} />
-      </header>
+        <header className={styles.header}>
+          <h1 className={styles.title}>
+            MAXIME LAPRAYE
+          </h1>
+          <h2 className={styles.title}>
+            DIGITAL MARKETING CONSULTANT
+          </h2>
+        </header>
 
+        <div className={styles.menu}>
+          <h1 className={styles.title}>
+            PAID SEARCH
+          </h1>
+          <h1 className={styles.title}>
+            ANALYTICS
+          </h1>
+          <h1 className={styles.title}>
+            REPORTING
+          </h1>
+          <h1 className={styles.title}>
+            TRAINING
+          </h1>
+          <h1 className={styles.title}>
+            OPERATIONS
+          </h1>
+        </div>
 
         <h1 className={styles.title}>
           COUCOU <a href="https://nextjs.org">Next.js!</a>
